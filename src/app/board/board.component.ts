@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardComponent } from '../card/card.component';
+import { Suit } from '../suit.enum';
 
 @Component({
   selector: 'app-board',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+  testCard: CardComponent;
+
   constructor() {
     console.log('board constructor');
+    this.testCard = new CardComponent();
+    this.testCard.suit = Suit.Spades;
+    this.testCard.value = 1;
   }
 
   ngOnInit(): void {
