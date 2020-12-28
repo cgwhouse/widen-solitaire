@@ -7,13 +7,14 @@ import { environment } from '../environments/environment';
 // Components
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
+import { CardComponent } from './card/card.component';
 
 // Material UI
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [AppComponent, BoardComponent],
+  declarations: [AppComponent, BoardComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
