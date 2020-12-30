@@ -1,11 +1,11 @@
-import { CardComponent } from './card/card.component';
+import { Card } from './card';
 import { Suit } from './suit.enum';
 
 /**
  * This class represents a shuffled deck of cards.
  */
 export class Deck {
-  shuffledCards: CardComponent[] = [];
+  shuffledCards: Card[] = [];
 
   constructor() {
     // Declare all possible suits and values in two separate arrays
@@ -13,13 +13,10 @@ export class Deck {
     const values: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
     // First make an array of cards in order, this is like opening a fresh deck for the first time
-    const sortedCards: CardComponent[] = [];
+    const sortedCards: Card[] = [];
     suits.forEach((suit) => {
       values.forEach((value) => {
-        const cardComponent = new CardComponent();
-        cardComponent.suit = suit;
-        cardComponent.value = value;
-        sortedCards.push(cardComponent);
+        sortedCards.push(new Card(suit, value));
       });
     });
 

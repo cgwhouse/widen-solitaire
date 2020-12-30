@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Suit } from '../suit.enum';
+import { Card } from '../card';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +7,7 @@ import { Suit } from '../suit.enum';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() suit!: Suit;
-  @Input() value!: number;
+  @Input() card!: Card;
 
   constructor() {
     console.log('constructor for card component');

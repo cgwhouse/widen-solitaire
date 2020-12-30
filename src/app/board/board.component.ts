@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardComponent } from '../card/card.component';
+import { Card } from '../card';
 import { Suit } from '../suit.enum';
 
 @Component({
@@ -8,13 +8,11 @@ import { Suit } from '../suit.enum';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-  testCard: CardComponent;
+  testCard: Card;
 
   constructor() {
     console.log('board constructor');
-    this.testCard = new CardComponent();
-    this.testCard.suit = Suit.Spades;
-    this.testCard.value = 1;
+    this.testCard = new Card(Suit.Spades, 1);
   }
 
   ngOnInit(): void {
